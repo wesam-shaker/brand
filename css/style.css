@@ -588,13 +588,11 @@ html{
     height: 50%;
 }
 .sochil a span{
-    /* display: none; */
+    display: none;
     position: absolute;
     left: 30px;
-    /* background: #000; */
     display: block;
     height: 100%;
-    /* width: 80px; */
     width: 0;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -604,6 +602,7 @@ html{
 }
 .sochil a:hover span{
     width: 80px;
+    display: block;
 }
 
 .sochil a:nth-child(1),
