@@ -560,6 +560,7 @@ html{
     position: fixed;
     background: transparent;
     top: 70px;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -572,29 +573,57 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0;
     width: 100%;
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    color: #fff;
+    width: 30px;
+    position: relative;
 }
-.sochil a:hover{
-    opacity: 0.6;
+.sochil a svg{
+    width: 70%;
+    height: 50%;
 }
-.sochil a:nth-child(1){
+.sochil a span{
+    /* display: none; */
+    position: absolute;
+    left: 30px;
+    /* background: #000; */
+    display: block;
+    height: 100%;
+    /* width: 80px; */
+    width: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.sochil a:hover span{
+    width: 80px;
+}
+
+.sochil a:nth-child(1),
+.sochil a:nth-child(1) span{
     background: #3b5998;
 }
-.sochil a:nth-child(2){
+.sochil a:nth-child(2),
+.sochil a:nth-child(2) span{
     background: #E1306C;
 }
-.sochil a:nth-child(3){
+.sochil a:nth-child(3),
+.sochil a:nth-child(3) span{
     background: #0e76a8;
 }
-.sochil a:nth-child(4){
+.sochil a:nth-child(4),
+.sochil a:nth-child(4) span{
     background: #25D366;
 }
-.sochil a:nth-child(5){
+.sochil a:nth-child(5),
+.sochil a:nth-child(5) span{
     background: #00acee;
 }
 /* END sochil */
