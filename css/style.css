@@ -2,6 +2,8 @@
 /* font-family: 'Cairo', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* font-family: 'Smooch Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Kufi Arabic', sans-serif; */
 :root{
     --yellow: #fec200;
     --black: #0e1213;
@@ -10,12 +12,13 @@
     --text: #f1f1f1;
     --smooch: 'Smooch Sans', sans-serif;
     --cairo: 'Cairo', sans-serif;
+    --noto: 'Noto Kufi Arabic', sans-serif;
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--cairo);
+    font-family: var(--noto);
     list-style: none;
     outline: none;
     user-select: none;
@@ -48,12 +51,14 @@ html{
     font-weight: 600;
     margin-bottom: 20px;
     position: relative;
+    font-family: var(--cairo);
 }
 .header-h2::after{
     content: '';
     position: absolute;
     top: 70px;
-    left: 48.5%;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--yellow);
     width: 50px;
     height: 5px;
@@ -249,7 +254,7 @@ html{
     padding: 20px 20px;
 }
 .slider .swiper-slide .div-text h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .slider .swiper-slide .div-text p{
     color: var(--text);
@@ -268,13 +273,30 @@ html{
         justify-content: center;
     }
     .slider .swiper-slide .div-text h2{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .slider .swiper-slide .div-text p{
         display: none;
     }
 }
 /* END SLIDER  */
+/* START MARQUEE */
+marquee{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background: var(--yellow);
+    font-size: 1.4rem;
+    direction: right;
+}
+@media only screen and (max-width: 1000px){
+    marquee{
+        font-size: 1.2rem;
+    }
+}
+/* END MARQUEE */
 /* START SERVICES */
 .services{
     color: #000;
@@ -422,6 +444,18 @@ html{
 }
 .counting .box-count .card h4{
     font-size: 1rem;
+    position: relative;
+    margin-bottom: 10px;
+}
+.counting .box-count .card h4::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--yellow);
+    width: 10%;
+    height: 2px;
 }
 .counting .box-count .card span{
     font-size: 1rem;
@@ -470,6 +504,9 @@ html{
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
 }
+.client .swiper-slide h3{
+    font-size: 1.2rem;
+}
 .client .swiper-button-next,
 .client .swiper-button-prev{
     color: var(--yellow);
@@ -477,6 +514,15 @@ html{
 .client .swiper-slide > div{
     display: flex;
     flex-direction: column;
+}
+@media only screen and (max-width: 1000px){
+    .client .swiper-slide img{
+        width: 70px;
+        height: 70px;
+    }
+    .client .swiper-slide h3{
+        font-size: 1rem;
+    }
 }
 /* END client */
 /* START idea */
@@ -522,13 +568,31 @@ html{
     text-align: center;
     padding: 20px;
 }
+@media only screen and (max-width: 600px){
+    .footer{
+        font-size: 0.9rem;
+    }
+}
 /* END FOOTER  */
+/* start online */
+.online{
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    top: 60px;
+    right: 0px;
+    padding: 0 10px;
+    z-index: 999;
+    font-size: 0.7rem;
+    border-radius: 2px 0 0 2px;
+}
+/* end online */
 /* START BUTTON TO TOP  */
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    right: 5px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
@@ -553,6 +617,12 @@ html{
 }
 #myBtn:hover {
     background-color: var(--yellow); /* Add a dark-grey background on hover */
+}
+@media only screen and (max-width: 600px){
+    #myBtn img,svg{
+        width: 15px;
+        height: 15px;
+    }
 }
 /* END BUTTON TO TOP  */
 /* START sochil */
@@ -588,21 +658,18 @@ html{
     height: 50%;
 }
 .sochil a span{
-    display: none;
     position: absolute;
     left: 30px;
-    display: block;
     height: 100%;
-    width: 0;
+    width: 0px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
 }
 .sochil a:hover span{
-    width: 80px;
-    display: block;
+    width: 90px;
 }
 
 .sochil a:nth-child(1),
@@ -624,5 +691,10 @@ html{
 .sochil a:nth-child(5),
 .sochil a:nth-child(5) span{
     background: #00acee;
+}
+@media only screen and (max-width: 600px){
+    .sochil{
+        display: none;
+    }
 }
 /* END sochil */
