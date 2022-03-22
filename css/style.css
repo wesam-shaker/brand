@@ -48,7 +48,7 @@ html{
     outline: none;
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 20px;
     position: relative;
     font-family: var(--cairo);
@@ -405,6 +405,11 @@ marquee{
 }
 .brief a:hover{
     opacity: 0.8;
+}
+@media only screen and (max-width: 1000px){
+    .brief p{
+        width: 90%;
+    }
 }
 /* END brief */
 /* START counting */
