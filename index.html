@@ -9,6 +9,9 @@
     <title>Brand / Home</title>
 </head>
 <body ononline="update(true)" onoffline="update(false)" onload="update(navigator.onLine)">
+    <div class="online">
+        <p >انت : <span id="status">()</span></p>
+    </div>
      <!-- START HEADER  -->
      <header class="header">
         <div class="container">
@@ -126,7 +129,7 @@
     </section>
     <!-- END SLIDER  -->
     <!-- START MARQUEE  -->
-    <marquee> 
+    <marquee direction="right"> 
         <p>Brand اهلاً وسهلاً بكم بموقع شركة</p>
     </marquee>
     <!-- END MARQUEE -->
@@ -393,9 +396,6 @@
         </a>
     </div>
     <!-- END sochil -->
-    <div class="online">
-        <p >انت : <span id="status">()</span></p>
-    </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
