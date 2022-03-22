@@ -289,7 +289,6 @@ marquee{
     color: var(--white);
     background: var(--yellow);
     font-size: 1.4rem;
-    direction: right;
 }
 @media only screen and (max-width: 1000px){
     marquee{
