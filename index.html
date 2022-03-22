@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Brand / Home</title>
 </head>
 <body ononline="update(true)" onoffline="update(false)" onload="update(navigator.onLine)">
-    <div class="online">
-        <p >انت : <span id="status">()</span></p>
-    </div>
      <!-- START HEADER  -->
      <header class="header">
         <div class="container">
@@ -396,7 +393,10 @@
         </a>
     </div>
     <!-- END sochil -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div class="online">
+        <p >انت : <span id="status">()</span></p>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
