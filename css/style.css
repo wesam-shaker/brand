@@ -561,6 +561,11 @@ marquee{
 .idea a:hover{
     opacity: 0.8;
 }
+@media only screen and (max-width: 1000px){
+    .idea p{
+        font-size: 1rem;
+    }
+}
 /* END idea */
 /* START FOOTER  */
 .footer{
@@ -583,7 +588,7 @@ marquee{
     top: 60px;
     right: 0px;
     padding: 0 10px;
-    z-index: 999;
+    z-index: 998;
     font-size: 0.7rem;
     border-radius: 2px 0 0 2px;
 }
